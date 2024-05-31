@@ -1,0 +1,47 @@
+
+
+
+
+
+from enum import Enum, auto
+
+
+class TrustModel(Enum):
+    NONE = auto()
+    CBSTM_TRUST_MODEL = auto()
+    DYNAMIC_TRUST_MODEL = auto()
+    ONTOLOGY_BASED_TRUST_MODEL = auto()
+    
+class Settings:
+    
+    
+    INTERVAL_OF_ACCIDENTS = 80
+    INTERVAL_OF_FALSE_ACCIDENTS = 50
+    
+    INTERVAL_OF_FALSE_TRAFFIC_LIGHT_REQUESTS = 100
+    
+    
+    MAX_NUMBER_SIMULATION_RUNS = 3
+    MAX_NUMBER_TRAFFIC_ACCIDENTS = 3
+    SIMULATION_RUN_INDEX = 0
+    EXPERIMENT_NAME = 'PLACEHOLDER'
+    EXPERIMENT_ID = 'EXP001'
+    
+    VERIFY_ACCIDENT_REPORT_AUTHENTICITY = True
+    VERIFY_TRAFFIC_LIGHT_REQUEST_AUTHENTICITY = True
+    
+    
+    SELECTED_TRUST_MODEL = TrustModel.ONTOLOGY_BASED_TRUST_MODEL
+    
+    TRUST_MODEL_DESCRIPTION = "Ontology-based Trust Model"
+  
+    
+    MAX_SIMULATION_DURATION = 3600
+    PERCENTAGE_OF_MALICIOUS_VEHICLES = 0.4
+    
+    
+    
+    
+    ROOT_DIRECTORY = '/app/output/simulation_runs'
+    
+    

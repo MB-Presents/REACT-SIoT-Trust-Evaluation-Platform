@@ -1,0 +1,6 @@
+/output/
+*.pyc
+*.pickle
+analytics/profiler
+*.csv
+*.pkl

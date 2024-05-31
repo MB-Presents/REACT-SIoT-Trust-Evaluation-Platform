@@ -1,0 +1,100 @@
+========================================
+ SIoT Experiment Configuration Report
+========================================
+
+--- General Settings ---
+EXPERIMENT_ID: EXP003
+EXPERIMENT_NAME: ROBUSTUNESS_EXPERIMENT_MALICIOUS_DEGREE0.4
+INTERVAL_OF_ACCIDENTS: 100
+INTERVAL_OF_FALSE_ACCIDENTS: 100
+INTERVAL_OF_FALSE_TRAFFIC_LIGHT_REQUESTS: 60
+MAX_NUMBER_SIMULATION_RUNS: 10
+MAX_NUMBER_TRAFFIC_ACCIDENTS: 10
+MAX_SIMULATION_DURATION: 3600
+PERCENTAGE_OF_MALICIOUS_VEHICLES: 0.2
+ROOT_DIRECTORY: /app/output/simulation_runs
+SELECTED_TRUST_MODEL: ctms_siot
+SIMULATION_RUN_INDEX: 3
+TRUST_MODEL_DESCRIPTION: CTMSD
+VERIFY_ACCIDENT_REPORT_AUTHENTICITY: True
+VERIFY_TRAFFIC_LIGHT_REQUEST_AUTHENTICITY: True
+
+--- Accident Simulation Settings ---
+ALLOWED_ACCIDENT_SPEED: 5
+ALLOWED_EMERGENCY_VEHICLES: ['emergency']
+ALLOWED_ROAD_VEHICLES: ['private'
+     'emergency'
+     'authority'
+     'army'
+     'vip'
+     'passenger'
+     'hov'
+     'taxi'
+     'bus'
+     'coach'
+     'delivery'
+     'truck'
+     'trailer'
+     'motorcycle'
+     'moped'
+     'bicycle'
+     'evehicle'
+     'custom1'
+     'custom2']
+ALLOWED_VEHICLE_COLLISION_TYPES: ['veh_passenger']
+ALLOWED_VEHICLE_FAKE_COLLISION_TYPES: ['veh_passenger'
+     'truck_truck'
+     'bus_bus']
+ALLOWED_VEHICLE_REPORTER_TYPES: [<DeviceType.VEHICLE: 2>
+     <DeviceType.SMART_PHONE: 5>]
+EMERGENCY_DROP_OFF: 668452814
+EMERGENCY_DROP_OFF_LANE: 668452814_0
+EMERGENCY_DROP_OFF_LANE_POSITION: 174.37
+EMERGENCY_DROP_OFF_LENGTH: 194.37
+EMERGENCY_LANE: 668452814_0
+EMERGENCY_TYPE_ID: emergency_vehicle
+EMERGENCY_VEHS: {'emergency_veh_1': {'emergency_drop_off': '668452814'
+     'emergency_drop_off_lane': '668452814_0'
+     'emergency_drop_off_position': 145
+     'initial_emergency_location': '994397868'
+     'initial_parking_time': 10800
+     'emergency_vehicle_type': 'emergency_vehicle'}
+     'emergency_veh_2': {'emergency_drop_off': '668452814'
+     'emergency_drop_off_lane': '668452814_0'
+     'emergency_drop_off_position': 120
+     'initial_emergency_location': '994397868'
+     'initial_parking_time': 10800
+     'emergency_vehicle_type': 'emergency_vehicle'}}
+EMERGENCY_VEH_IDS: ['emergency_veh_1']
+INITIAL_EMEREGENCY_PARKING_TIME: 10800
+INITIAL_EMERGENCY_LOCATION: 994397868
+MAX_NUMBER_OF_ACCIDENTS: 20
+PARKING_TIME_ACCIDENT: 20
+PARKING_TIME_HOSPITAL: 3600
+REPORTER_RADIUS: 30
+SERVICE_REQUESTOR_DISTANCE: 40
+
+--- Traffic Light Application Settings ---
+SERVICE_REQUESTOR_DISTANCE: 400
+SMART_PHONE_DISTANCE_SENSING: 60
+VEHICLE_DISTANCE_SENSING: 60
+
+--- Trust Management Settings ---
+ADAPTIVE_TRUST_MODEL_SELECTOR: None
+MAX_TRANSACTION_EXCHANGE_DISTANCE: 30
+REPUTATION_COMPUTATION_STRATEGY: ReputationComputationStrategy.AVERAEG_OF_LAST_N_TRANSACTIONS
+REPUTATION_CONTEXT: ReputationContextSettings.NO_CONTEXT
+REPUTATION_SCOPE: ReputationScope.LOCAL
+THRESHOLD_FOR_NUM_OF_TRUSTWORTHY_RELATIONSHIPS: 2
+TRANSACTION_EXCHANGE_SCHEME: 2
+TRUSTWORTHY_THRESHOLD_OF_RELATIONSHIPS: 0.7
+TRUST_COMPUTATION_MODEL: <trust_management.trust_recommenders.context_based_trust_models.ctms_abderrahim_2017.ContextBasedTrustManagementSystem object at 0xffff8af674d0>
+TRUST_DECISION_MAKING_MODEL: <trust_management.decision_making_module.threshold_based_decision_making.threshold_based_decision_maker.ThresholdBasedDecisionMaker object at 0xffffbceb2720>
+TRUST_MODEL_SCHEME: <trust_management.settings.TrustModelScheme object at 0xffff886ed9a0>
+TRUST_SITUATION_SETTINGS: <trust_management.situation_recognition_module.situation_recognition.SituationSettings object at 0xffff86c66c00>
+TRUST_THRESHOLD_RELATIONSHIP: 0.5
+TRUST_TRANSACTION_THRESHOLD: 0.5
+TRUST_UPDATE_MODEL: <trust_management.trust_update.context_based_update.abderahhim_update.TRUST_UPDATE_ABDERRAHIM_2017 object at 0xffff8af67020>
+USES_ADAPTIVE_TRUST_MODEL_SELECTION: False
+USE_RELATIONSHIP_CONTEXT: False
+

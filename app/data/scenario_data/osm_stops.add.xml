@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2022-07-14 15:47:17 by Eclipse SUMO netconvert Version 1.14.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <type-files value="/usr/local/opt/sumo/share/sumo/data/typemap/osmNetconvert.typ.xml,/usr/local/opt/sumo/share/sumo/data/typemap/osmNetconvertUrbanDe.typ.xml,/usr/local/opt/sumo/share/sumo/data/typemap/osmNetconvertPedestrians.typ.xml,/usr/local/opt/sumo/share/sumo/data/typemap/osmNetconvertBicycle.typ.xml"/>
+        <osm-files value="osm_bbox.osm.xml.gz"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml"/>
+        <output.street-names value="true"/>
+        <output.original-names value="true"/>
+        <ptstop-output value="osm_stops.add.xml"/>
+        <ptline-output value="osm_ptlines.xml"/>
+    </output>
+
+    <projection>
+        <proj value="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs"/>
+    </projection>
+
+    <processing>
+        <geometry.remove value="true"/>
+        <roundabouts.guess value="true"/>
+        <lefthand value="true"/>
+    </processing>
+
+    <tls_building>
+        <tls.discard-simple value="true"/>
+        <tls.join value="true"/>
+        <tls.guess-signals value="true"/>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+
+    <ramp_guessing>
+        <ramps.guess value="true"/>
+    </ramp_guessing>
+
+    <junctions>
+        <junctions.join value="true"/>
+        <junctions.corner-detail value="5"/>
+    </junctions>
+
+    <pedestrian>
+        <crossings.guess value="true"/>
+    </pedestrian>
+
+    <railway>
+        <railway.topology.repair value="true"/>
+    </railway>
+
+    <formats>
+        <osm.bike-access value="true"/>
+        <osm.sidewalks value="true"/>
+    </formats>
+
+    <report>
+        <verbose value="true"/>
+    </report>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <busStop id="5188277991" name="London Circuit before East Row" lane="489692411#1_0" startPos="45.79" endPos="60.79" friendlyPos="true">
+        <access lane="-474953695#0_0" pos="13.07" length="30.28" friendlyPos="1"/>
+        <access lane="-768639715_0" pos="123.61" length="31.96" friendlyPos="1"/>
+        <access lane="-768639722_0" pos="12.54" length="11.58" friendlyPos="1"/>
+        <access lane="474953693#6_0" pos="92.48" length="14.58" friendlyPos="1"/>
+        <access lane="768639715_0" pos="0.00" length="30.02" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5188280026" name="London Circuit Commonwealth Bank" lane="305112616#3_0" startPos="119.88" endPos="127.41" friendlyPos="true">
+        <access lane="-232866961#0_0" pos="52.27" length="26.93" friendlyPos="1"/>
+        <access lane="-753613763#1_0" pos="0.00" length="72.50" friendlyPos="1"/>
+        <access lane="-775633692_0" pos="43.36" length="10.32" friendlyPos="1"/>
+        <access lane="232866961#0_0" pos="43.78" length="29.93" friendlyPos="1"/>
+        <access lane="775633691#1_0" pos="93.27" length="13.32" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5188280068" name="London Circuit Metropolitan Bulding" lane="668485040_0" startPos="0.00" endPos="7.50" friendlyPos="true">
+        <access lane="-775633664#3_0" pos="24.68" length="16.87" friendlyPos="1"/>
+        <access lane="-777424812_0" pos="0.00" length="48.41" friendlyPos="1"/>
+        <access lane="775633664#3_0" pos="65.21" length="13.87" friendlyPos="1"/>
+        <access lane="775633664#4_0" pos="0.00" length="49.51" friendlyPos="1"/>
+        <access lane="777424812_0" pos="121.35" length="45.73" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5188280103" name="London Circuit opposite City Police Station" lane="333934000_0" startPos="92.80" endPos="107.80" friendlyPos="true">
+        <access lane="-775633688#4_0" pos="120.33" length="14.37" friendlyPos="1"/>
+        <access lane="232849569#0_0" pos="36.91" length="24.68" friendlyPos="1"/>
+        <access lane="775633688#4_0" pos="11.57" length="11.37" friendlyPos="1"/>
+        <access lane="777424817#0_0" pos="62.55" length="25.94" friendlyPos="1"/>
+        <access lane="777424817#1_0" pos="0.62" length="23.27" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5188281023" name="London Circuit Legislative Assembly" lane="666660152#1_0" startPos="78.57" endPos="93.57" friendlyPos="true">
+        <access lane="-232866961#0_0" pos="13.08" length="12.30" friendlyPos="1"/>
+        <access lane="-700995755_0" pos="0.00" length="30.13" friendlyPos="1"/>
+        <access lane="-775633692_0" pos="82.12" length="25.54" friendlyPos="1"/>
+        <access lane="232866961#0_0" pos="82.97" length="15.30" friendlyPos="1"/>
+        <access lane="775633691#1_0" pos="54.55" length="28.54" friendlyPos="1"/>
+    </busStop>
+    <busStop id="5188281026" name="London Circuit after Akuna Street" lane="333935385#1_0" startPos="24.75" endPos="39.75" friendlyPos="true">
+        <access lane="-432521766#0_0" pos="167.79" length="16.53" friendlyPos="1"/>
+        <access lane="-701455095#0_0" pos="34.27" length="19.53" friendlyPos="1"/>
+        <access lane="-713194425_0" pos="149.83" length="29.45" friendlyPos="1"/>
+        <access lane="-713194426#0_0" pos="0.00" length="49.22" friendlyPos="1"/>
+        <access lane="713194425_0" pos="24.28" length="26.45" friendlyPos="1"/>
+    </busStop>
+</additional>

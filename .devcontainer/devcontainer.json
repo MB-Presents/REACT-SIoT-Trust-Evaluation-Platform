@@ -1,0 +1,40 @@
+{
+  "name": "Sumo & ELK Stack",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "sumo",
+  "workspaceFolder": "/app",
+  // Set *default* container specific settings.json values on container create.
+  
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "/bin/bash",
+            "icon": "terminal-bash"
+          }
+          // "zsh": {
+          //     "path": "/usr/bin/zsh",
+          //     "icon": "terminal-bash"
+          // }
+        }
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "VisualStudioExptTeam.intellicode-api-usage-examples",
+        "GitHub.copilot"
+      ]
+    }
+  },
+  "remoteUser": "root",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "installTools": true,
+      "optimize": true,
+      "installJupyterlab": true,
+      "version": "latest"
+    }
+  }
+}

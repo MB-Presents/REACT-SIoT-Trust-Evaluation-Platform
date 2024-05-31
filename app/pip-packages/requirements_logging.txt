@@ -1,0 +1,3 @@
+logstash
+python-logstash-async
+elasticsearch
