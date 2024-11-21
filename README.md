@@ -10,15 +10,28 @@ The **REACT-SIoT** project is a research initiative designed to evaluate and val
 ---
 
 ## Table of Contents
-1. [Features](#features)
-2. [Installation](#installation)
-3. [Manuals for Tools and Setup](#manuals-for-tools-and-setup)
-   - [X11 Setup](#x11-setup)
-   - [ELK Stack Access and Logs](#elk-stack-access-and-logs)
-4. [Usage](#usage)
-5. [Architecture](#architecture)
-6. [Contributing](#contributing)
-7. [License](#license)
+- [REACT-SIoT](#react-siot)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Installation](#installation)
+    - [Prerequisites](#prerequisites)
+    - [Steps](#steps)
+  - [Manuals for Tools and Setup](#manuals-for-tools-and-setup)
+    - [X11 Setup](#x11-setup)
+      - [On MacOS](#on-macos)
+      - [On Linux](#on-linux)
+      - [On Windows](#on-windows)
+    - [ELK Stack Access and Logs](#elk-stack-access-and-logs)
+      - [Step 1: Ensure ELK Stack Is Running](#step-1-ensure-elk-stack-is-running)
+      - [Step 2: Access Kibana](#step-2-access-kibana)
+      - [Step 3: View Logs in Kibana](#step-3-view-logs-in-kibana)
+      - [Access Logs from Docker](#access-logs-from-docker)
+  - [Usage](#usage)
+    - [Running the Platform](#running-the-platform)
+    - [Evaluating Trust Models](#evaluating-trust-models)
+  - [Architecture](#architecture)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ---
 
@@ -197,7 +210,3 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 ---
 
-### Future Improvements
-1. Add pre-configured scripts to automate X11 and ELK setups.
-2. Provide example datasets and sample trust models.
-3. Include detailed API documentation for programmatic usage.
