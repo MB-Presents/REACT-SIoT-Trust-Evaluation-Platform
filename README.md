@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 <!-- [![Build Status](https://img.shields.io/github/actions/workflow/status/MB-Presents/REACT-SIoT/build.yml)](https://github.com/MB-Presents/REACT-SIoT/actions)   -->
 <!-- [![Docker](https://img.shields.io/docker/pulls/MB-Presents/react-siot)](https://hub.docker.com/r/MB-Presents/react-siot) -->
-[![Contributors](https://img.shields.io/github/contributors/MB-Presents/REACT-SIoT)](https://github.com/MB-Presents/REACT-SIoT/graphs/contributors)
+<!-- [![Contributors](https://img.shields.io/github/contributors/MB-Presents/REACT-SIoT)](https://github.com/MB-Presents/REACT-SIoT/graphs/contributors) -->
 
 The **REACT-SIoT** project is a research initiative designed to evaluate and validate novel trust models in **Social Internet of Things (SIoT)** environments. The platform provides tools for researchers and industry professionals to simulate realistic SIoT settings, benchmark trust metrics, and enable trustworthy distributed collaborations.
 
