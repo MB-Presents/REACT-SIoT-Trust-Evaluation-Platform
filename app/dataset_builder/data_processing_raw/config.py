@@ -1,0 +1,1 @@
+MAX_RADIUS = 50.0

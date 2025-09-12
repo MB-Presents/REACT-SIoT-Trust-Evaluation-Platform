@@ -1,7 +1,7 @@
 from experiments.settings import Settings
-from scenario.emergency_response.constants import AccidentSettings
-from scenario.intelligent_traffic_light.constants import TrafficLightApplicationSettings
-from trust_management.settings import TrustManagementSettings
+from scenarios.canberra_case_study.apps.emergency_response.constants import AccidentSettings
+from scenarios.canberra_case_study.apps.intelligent_traffic_light.constants import TrafficLightApplicationSettings
+from trust.settings import TrustManagementSettings
 
 
 def collect_settings():

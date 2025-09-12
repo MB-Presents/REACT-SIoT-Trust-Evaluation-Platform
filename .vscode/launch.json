@@ -3,10 +3,10 @@
     "configurations": [
 
         {
-            "name": "main.py",
+            "name": "simulation_manager.py",
             "type": "python",
             "request": "launch",
-            "program": "main.py",
+            "program": "app/simulation_manager.py",
             "console": "integratedTerminal",
             "justMyCode": true
         },

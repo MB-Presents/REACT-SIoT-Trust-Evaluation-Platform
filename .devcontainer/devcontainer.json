@@ -4,7 +4,10 @@
   "service": "sumo",
   "workspaceFolder": "/app",
   // Set *default* container specific settings.json values on container create.
-  
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached"
+  ],
+
   "customizations": {
     "vscode": {
       "settings": {
@@ -35,6 +38,10 @@
       "optimize": true,
       "installJupyterlab": true,
       "version": "latest"
-    }
+    },
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "remoteEnv": {
+    "LOCAL_GIT_CONFIG": "${localWorkspaceFolder}/.gitconfig"
   }
 }

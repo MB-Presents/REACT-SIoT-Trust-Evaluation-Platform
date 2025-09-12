@@ -1,9 +1,12 @@
 import json
 import logging
+
 from logstash_async.constants import Constants
 
+from scenarios.canberra_case_study.core.scenario_config import ScenarioParameters
+Constants.QUEUED_EVENTS_BATCH_SIZE = 2000 # type: ignore
 
-Constants.QUEUED_EVENTS_BATCH_SIZE = 2000
+
 
             
 from logstash_async.handler import AsynchronousLogstashHandler
@@ -13,9 +16,6 @@ from enum import Enum, auto
 
 import pandas as pd
 
-from data.simulation.scenario_constants import Constants as sc
-
-from data_models.simulation.logging import ObjectType
 from experiments.settings import Settings
 
 
@@ -53,14 +53,15 @@ class Logging(object):
             cls._instance = super().__new__(cls)
         return cls._instance
 
-    def __init__(self, logger_name='python-logger', host='canberra-small-logstash-1', port=50000):
+    def __init__(self, logger_name='python-logger', host='react-siot-trust-evaluation-platform-logstash-1', port=50000):
         
         if not hasattr(self, "is_initialized"):
-            self.async_handler : AsynchronousLogstashHandler = None
+            
             self.is_initialized = True
-            self.es : Elasticsearch = None
+            
+            
             try:
-                self.es = Elasticsearch(['http://canberra-small-elasticsearch-1:9200'], 
+                self.es = Elasticsearch(['http://react-siot-trust-evaluation-platform-elasticsearch-1:9200'], 
                                         http_auth=('elastic', 'changeme'), 
                                         retry_on_timeout=True, 
                                         request_timeout=30)
@@ -76,21 +77,32 @@ class Logging(object):
             logger.addHandler(self.async_handler)
             
             self.logger_ls = logger
-    
-        
+
+
+        assert self.es, "Elasticsearch client is not initialized"
+        assert self.async_handler, "AsynchronousLogstashHandler is not initialized"
+        assert self.logger_ls, "Logger is not initialized"
+
     def delete_index(self, index_name='sumo'):
-        
-        if self.es.indices.exists(index=index_name):
-            self.es.indices.delete(index=index_name)
-        
-        if self.es.indices.exists(index='sumo'):
-            print("Deleting index: sumo")
-        
-        if self.es.indices.exists(index='log'):
-            self.es.indices.delete(index='log')
+        self.es.indices.delete(index=index_name, ignore_unavailable=True)
+    # print(f"Deleting index: {index_name}")
+
+        self.es.indices.delete(index='log', ignore_unavailable=True)
+        self.es.indices.delete(index='logs', ignore_unavailable=True)
             
-        if self.es.indices.exists(index='logs'):
-            self.es.indices.delete(index='logs')
+        
+        # if self.es.indices.exists(index=index_name,ignore_unavailable=True):
+        
+        # # if self.es.indices.exists(index_name,):
+        #     self.es.indices.delete(index=index_name,ignore_unavailable=True)
+        #     print("Deleting index: sumo")
+        
+        
+        # if self.es.indices.exists(index='log'):
+        #     self.es.indices.delete(index='log')
+            
+        # if self.es.indices.exists(index='logs',ignore_unavailable=True):
+        #     self.es.indices.delete(index='logs')
             
     def create_index(self, index_name='sumo'):
         settings = {
@@ -120,26 +132,24 @@ def exception(e: Exception, message=""):
     exception_log = {
         'log_level': LogLevel.EXCEPTION.name,
         'exception': str(e),
-        'time':sc.TIME,
+        'time':ScenarioParameters.TIME,
+        'message': message
     }
     
-    exception_log.update(message)
     json_message = json.dumps(exception_log)
 
     get_logger().get_instance().exception(json_message)
 
 
-def error(object_type: ObjectType,  message : dict):
+def error(object_type: str,  message : str):
 
     error_log = {
         'log_level': LogLevel.ERROR.name,
-        'object_type': object_type.name,
-        'time': sc.TIME,
+        'object_type': object_type,
+        'time': ScenarioParameters.TIME,
         'message': message
         
     } 
-    
-    error_log.update(message)
     
     json_message = json.dumps(error_log)
 
@@ -152,12 +162,12 @@ class LoggingBehaviour(Enum):
     NONE = auto()
 
 
-def info(object_type: ObjectType, message : dict, log_object: LoggingBehaviour = LoggingBehaviour.NONE):
+def info(object_type: str, message : dict, log_object: LoggingBehaviour = LoggingBehaviour.NONE):
 
     info_log = {
         'log_level': LogLevel.INFO.name,
-        'object_type': object_type.name,
-        'time': sc.TIME,
+        'object_type': object_type,
+        'time': ScenarioParameters.TIME,
         'experiment_id': Settings.EXPERIMENT_ID,
         'simulation_run_id': Settings.SIMULATION_RUN_INDEX
     } 
@@ -165,15 +175,15 @@ def info(object_type: ObjectType, message : dict, log_object: LoggingBehaviour =
     
     if log_object != LoggingBehaviour.NONE:
         if log_object == LoggingBehaviour.STATUS:
-            info_log.update({"id": f"{LoggingBehaviour.STATUS.name}_time_{sc.TIME}_{message['device_id']}"})
+            info_log.update({"id": f"{LoggingBehaviour.STATUS.name}_time_{ScenarioParameters.TIME}_{message['device_id']}"})
         
         
         elif log_object == LoggingBehaviour.SENSING:
-            info_log.update({"id": f"{LoggingBehaviour.SENSING.name}_time_{sc.TIME}_{message['sensor_id']}_sensing_{message['device_id']}"})
+            info_log.update({"id": f"{LoggingBehaviour.SENSING.name}_time_{ScenarioParameters.TIME}_{message['sensor_id']}_sensing_{message['device_id']}"})
         
     info_log.update(message)
 
-    if sc.logging_info_active == True:
+    if ScenarioParameters.logging_info_active == True:
         
         json_message = json.dumps(info_log)
         
@@ -183,7 +193,7 @@ def info(object_type: ObjectType, message : dict, log_object: LoggingBehaviour =
             print(f"Failed to log message: {e}")
 
 def get_logger() -> Logging:
-    return Logging(port=50000, host='canberra-small-logstash-1', logger_name='python-logger')
+    return Logging(port=50000, host='react-siot-trust-evaluation-platform-logstash-1', logger_name='python-logger')
 
 
 

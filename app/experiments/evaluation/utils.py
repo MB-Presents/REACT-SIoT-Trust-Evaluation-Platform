@@ -3,13 +3,13 @@ from typing import TYPE_CHECKING, Dict
 import sys
 
 from typing import Dict
-from data_models.report_management.report.report_models import ReportType, Situation
-from data_models.events.simulation_events import EventType, SimulationEvent, VerificationState
+from core.models.uniform.components.report_models import ReportType, Situation
+from core.models.events.simulation_events import EventType, SimulationEvent, VerificationState
 
 
 if TYPE_CHECKING:
-    from data_models.report_management.report.report import SendingPacket
-    from data_models.report_management.report_manager import ReportManager
+    from core.models.uniform.components.report import SendingPacket
+    from core.simulation.report_manager import ReportManager
 
 
 

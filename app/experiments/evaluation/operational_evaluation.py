@@ -9,13 +9,13 @@ import numpy as np
 
 
 from experiments.settings import Settings
-from scenario.emergency_response.constants import AccidentStatus
+from scenarios.canberra_case_study.apps.emergency_response.constants import AccidentStatus
 
 if TYPE_CHECKING:
-    from data_models.report_management.report_manager import ReportManager
-    from data_models.report_management.report.report import SendingPacket
+    from core.simulation.report_manager import ReportManager
+    from core.models.uniform.components.report import SendingPacket
 
-from data_models.report_management.report.report_models import ReportType
+from core.models.uniform.components.report_models import ReportType
 
 
 class PerformanceAccidentRecord:

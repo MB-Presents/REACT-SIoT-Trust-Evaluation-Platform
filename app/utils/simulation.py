@@ -4,16 +4,17 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 
-from data_models.events.simulation_events import VerificationState
-from data_models.iot_devices.common import DeviceType
-from scenario.emergency_response.constants import AccidentSettings
+from core.models.events.simulation_events import VerificationState
+from core.models.devices.common import DeviceType
+from scenarios.canberra_case_study.apps.emergency_response.constants import AccidentSettings
+
 
 if TYPE_CHECKING:
 
-    from data_models.report_management.report.report import SendingPacket
-    from data_models.events.simulation_events import SimulationEvent, SimulationEventManager
-    from data_models.iot_devices.device_handler import Devices_Group_Handler, get_devices_group_handler
-import data_models.iot_devices.device_handler as handler
+    from core.models.uniform.components.report import SendingPacket
+    from core.models.events.simulation_events import SimulationEvent, SimulationEventManager
+    from core.models.devices.device_handler import DevicesGroupHandler, get_devices_group_handler
+import core.models.devices.device_handler as handler
 from traci import vehicle
 from traci.exceptions import TraCIException
 
@@ -28,9 +29,9 @@ def is_object_in_simulation(object_id: str) -> bool:
         bool: True if the object is in the simulation, False otherwise.
     """
     
-    devices : Devices_Group_Handler = handler.get_devices_group_handler()
-    existing_vehicles = devices.get(DeviceType.VEHICLE).all()
-    existing_smart_phones = devices.get(DeviceType.VEHICLE).all()
+    devices : DevicesGroupHandler = handler.get_devices_group_handler()
+    existing_vehicles = devices.get_devices_by_group(DeviceType.VEHICLE)
+    existing_smart_phones = devices.get_devices_by_group(DeviceType.VEHICLE)
     
     object_in_vehicles = object_id in existing_vehicles.keys()
     object_in_smart_phones = object_id  in existing_smart_phones.keys()

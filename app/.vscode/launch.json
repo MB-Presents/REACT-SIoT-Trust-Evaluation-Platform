@@ -4,9 +4,19 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+    
+        {
+            "name": "Python: Start Experiments",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "start_experiments.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+
         {
             "name": "Python: Current File",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
@@ -34,7 +44,7 @@
         // },
         {
             "name": "Python: Debug HDF to TF Record",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
@@ -44,7 +54,7 @@
         },
         {
             "name": "Python: Debug Main",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/main.py",
             "console": "integratedTerminal",

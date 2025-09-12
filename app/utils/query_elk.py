@@ -11,7 +11,7 @@ import elasticsearch
 # logging.basicConfig(level=logging.ERROR)
 
 
-es = Elasticsearch(['http://canberra-small-elasticsearch-1:9200'], 
+es = Elasticsearch(['http://react-siot-trust-evaluation-platform-elasticsearch-1:9200'], 
                    basic_auth=('elastic', 'changeme'), 
                    retry_on_timeout=True, 
                    request_timeout=30)

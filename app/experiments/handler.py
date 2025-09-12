@@ -1,14 +1,15 @@
 
 import yaml
-from experiment_design import ExperimentSettings
+
+from experiments.design.settings import ExperimentSettings
 from experiments.settings import Settings
-from scenario.emergency_response.constants import AccidentSettings
-from scenario.intelligent_traffic_light.constants import TrafficLightApplicationSettings
-import simulation_config
-from trust_management.settings import TrustManagementSettings, TrustModelScheme
-from simulation_config import SimulationConfiguration
-from simulation_config import AccidentConfiguration
-from simulation_config import TrafficLightApplicationConfiguration
+from scenarios.canberra_case_study.apps.emergency_response.constants import AccidentSettings
+from scenarios.canberra_case_study.apps.intelligent_traffic_light.constants import TrafficLightApplicationSettings
+import scenarios.canberra_case_study.simulation.simulation_config as simulation_config
+from trust.settings import TrustManagementSettings, TrustModelScheme
+from scenarios.canberra_case_study.simulation.simulation_config import SimulationConfiguration
+from scenarios.canberra_case_study.simulation.simulation_config import AccidentConfiguration
+from scenarios.canberra_case_study.simulation.simulation_config import TrafficLightApplicationConfiguration
 
 def configure_experiment_settings(EXPERIMENT_SETTINGS : ExperimentSettings):
     

@@ -1,11 +1,11 @@
 from typing import Tuple
-from data_models.events.simulation_events import SimulationEventManager
-from data_models.iot_devices.device_handler import Devices_Group_Handler
-from data_models.iot_devices.genric_iot_device import GenericDevice
-from data_models.report_management.report.report_models import ReportType
-from data_models.report_management.report_manager import ReportManager
-from trust_management.data_models.relationship.data_models.relationship import Relationship
-from data.simulation.scenario_constants import Constants as sc
+from core.models.events.simulation_events import SimulationEventManager
+from core.models.devices.device_handler import DevicesGroupHandler
+from core.models.devices.genric_iot_device import GenericDevice
+from core.models.uniform.components.report_models import ReportType
+from core.simulation.report_manager import ReportManager
+from trust.data_models.relationship.data_models.relationship import Relationship
+from scenarios.canberra_case_study.core.scenario_config import ScenarioParameters
 
 
 
@@ -16,7 +16,7 @@ from data.simulation.scenario_constants import Constants as sc
 
 
 
-def compute_number_of_overall_network_relationship_over_time(devices : Devices_Group_Handler, report_manager : ReportManager, simulation_event : SimulationEventManager, time_step : int):
+def compute_number_of_overall_network_relationship_over_time(devices : DevicesGroupHandler, report_manager : ReportManager, simulation_event : SimulationEventManager, time_step : int):
     
     device_dict = devices.get_devices()
     
@@ -57,7 +57,7 @@ def compute_number_of_overall_network_relationship_over_time(devices : Devices_G
     
     
     
-    # for time in range(0, sc.TIME, 1):
+    # for time in range(0, ScenarioParameters.TIME, 1):
         
     #     relationships_per_time_step[time] = {}
         

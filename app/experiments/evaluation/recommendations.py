@@ -1,8 +1,8 @@
-from data_models.report_management.report.report_models import ReportType
+from core.models.uniform.components.report_models import ReportType
 
 
-from data_models.events.simulation_events import VerificationState
-from data_models.report_management.report_manager import ReportManager
+from core.models.events.simulation_events import VerificationState
+from core.simulation.report_manager import ReportManager
 from sklearn.metrics import classification_report, confusion_matrix
 
 

@@ -4,8 +4,8 @@ import numpy as np
 import pandas as pd
 
 from experiments.settings import Settings
-from trust_management.trust_recommenders.ontology_based.constants import TrustModelSettings
-import pathfinder
+from trust.trust_recommenders.ontology_based.constants import TrustModelSettings
+import utils.pathfinder as pathfinder
 
 def get_experiment_results(experiments_result : list):
     columns = [

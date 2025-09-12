@@ -151,7 +151,7 @@ def remove_extra_attributes(objects : list):
     
 def get_trust_transactions():
          
-    es = Elasticsearch(['http://canberra-small-elasticsearch-1:9200'], basic_auth=('elastic', 'changeme'), retry_on_timeout=True, request_timeout=30)
+    es = Elasticsearch(['http://react-siot-trust-evaluation-platform-elasticsearch-1:9200'], basic_auth=('elastic', 'changeme'), retry_on_timeout=True, request_timeout=30)
 
     # Define the index and query parameters
     index = "sumo"
@@ -194,7 +194,7 @@ def get_trust_transactions():
 
 
 def get_trust_transactions_batched():
-    es = Elasticsearch(['http://canberra-small-elasticsearch-1:9200'], 
+    es = Elasticsearch(['http://react-siot-trust-evaluation-platform-elasticsearch-1:9200'], 
                        basic_auth=('elastic', 'changeme'), 
                        retry_on_timeout=True, 
                        request_timeout=30)
@@ -249,7 +249,7 @@ def get_trust_transactions_batched():
         
 def get_events():
 
-    es = Elasticsearch(['http://canberra-small-elasticsearch-1:9200'], basic_auth=('elastic', 'changeme'), retry_on_timeout=True, request_timeout=30)
+    es = Elasticsearch(['http://react-siot-trust-evaluation-platform-elasticsearch-1:9200'], basic_auth=('elastic', 'changeme'), retry_on_timeout=True, request_timeout=30)
 
     # Define the index and query parameters
     index = "sumo"
@@ -293,7 +293,7 @@ def get_events():
 
 def get_max_time():
 
-    es = Elasticsearch(['http://canberra-small-elasticsearch-1:9200'], basic_auth=('elastic', 'changeme'), retry_on_timeout=True, request_timeout=30)
+    es = Elasticsearch(['http://react-siot-trust-evaluation-platform-elasticsearch-1:9200'], basic_auth=('elastic', 'changeme'), retry_on_timeout=True, request_timeout=30)
 
     # Define the index and query parameters
     index = "sumo"
@@ -346,7 +346,7 @@ def get_max_time():
 
 def get_reports():
     
-    es = Elasticsearch(['http://canberra-small-elasticsearch-1:9200'], basic_auth=('elastic', 'changeme'), retry_on_timeout=True, request_timeout=30)
+    es = Elasticsearch(['http://react-siot-trust-evaluation-platform-elasticsearch-1:9200'], basic_auth=('elastic', 'changeme'), retry_on_timeout=True, request_timeout=30)
         
     index = "sumo"
     experiment_id = "EXP001"
@@ -388,7 +388,7 @@ def get_reports():
 def get_object_states_for_time_range(start_time: int, end_time: int):
     try:
         print('Test')
-        es = Elasticsearch(['http://canberra-small-elasticsearch-1:9200'], basic_auth=('elastic', 'changeme'), retry_on_timeout=True, request_timeout=120)
+        es = Elasticsearch(['http://react-siot-trust-evaluation-platform-elasticsearch-1:9200'], basic_auth=('elastic', 'changeme'), retry_on_timeout=True, request_timeout=120)
 
         index = "sumo"
         experiment_id = "EXP001"
@@ -450,7 +450,7 @@ def get_object_states_for_time_range(start_time: int, end_time: int):
 
 def get_object_state_at_timestep(time : int = 0):
 
-    es = Elasticsearch(['http://canberra-small-elasticsearch-1:9200'], basic_auth=('elastic', 'changeme'), retry_on_timeout=True, request_timeout=30)
+    es = Elasticsearch(['http://react-siot-trust-evaluation-platform-elasticsearch-1:9200'], basic_auth=('elastic', 'changeme'), retry_on_timeout=True, request_timeout=30)
 
     index = "sumo"
     experiment_id = "EXP001"
@@ -505,7 +505,7 @@ def get_object_state_at_timestep(time : int = 0):
 
 def get_traffic_light_state_at_timestep(time : int = 0):
 
-    es = Elasticsearch(['http://canberra-small-elasticsearch-1:9200'], basic_auth=('elastic', 'changeme'), retry_on_timeout=True, request_timeout=30)
+    es = Elasticsearch(['http://react-siot-trust-evaluation-platform-elasticsearch-1:9200'], basic_auth=('elastic', 'changeme'), retry_on_timeout=True, request_timeout=30)
 
     index = "sumo"
     experiment_id = "EXP001"
@@ -554,7 +554,7 @@ def get_traffic_light_state_at_timestep(time : int = 0):
 
 def get_device_state(device_id : str, time : int = 0):
 
-    es = Elasticsearch(['http://canberra-small-elasticsearch-1:9200'], basic_auth=('elastic', 'changeme'), retry_on_timeout=True, request_timeout=30)
+    es = Elasticsearch(['http://react-siot-trust-evaluation-platform-elasticsearch-1:9200'], basic_auth=('elastic', 'changeme'), retry_on_timeout=True, request_timeout=30)
 
     index = "sumo"
     experiment_id = "EXP001"

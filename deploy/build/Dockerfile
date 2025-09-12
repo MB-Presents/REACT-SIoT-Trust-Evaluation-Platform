@@ -30,15 +30,20 @@ RUN apt-get install -y \
 
 RUN add-apt-repository ppa:deadsnakes/ppa -y 
 RUN add-apt-repository ppa:sumo/stable
+RUN apt-get update -y
 
-RUN apt install -y python3.11
-RUN curl -sS https://bootstrap.pypa.io/get-pip.py | python3.11
+RUN apt install -y python3.12
+#  python3.12-venv
+# RUN apt install -y python3-pip
+# RUN curl -sS https://bootstrap.pypa.io/get-pip.py | python3.12
+RUN curl -sS https://bootstrap.pypa.io/get-pip.py | python3.12
 
 RUN apt-get update -y 
 RUN apt-get install gcc
-RUN apt-get install -y python3.11-dev
+RUN apt-get install -y python3.12-dev
 
-RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
+RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 1
+# RUN update-alternatives --config python3
 
 RUN echo "Building with Python version:" && python3 --version
 
@@ -49,7 +54,6 @@ RUN echo "Building with Python version:" && python3 --version
 
 RUN apt-get update -y
 
-RUN apt-get update -y
 RUN apt update
 RUN apt install -y sumo sumo-tools sumo-doc
 
@@ -58,7 +62,7 @@ RUN apt-get update -y
 RUN python3 --version
 
 # Set environment variables
-ENV SUMO_HOME /usr/share/sumo
+ENV SUMO_HOME=/usr/share/sumo
 ENV DISPLAY=:0
 ENV XAUTHORITY=/tmp/.docker.xauth
 
@@ -85,15 +89,15 @@ COPY app /app
 # RUN pip install --no-cache-dir -r requirements.txt
 # RUN pip install --no-cache-dir -r additional.txt
 
-
-
-
 RUN pip install -r pip-packages/requirements_core.txt
 RUN pip install -r pip-packages/requirements_ml.txt
 RUN pip install -r pip-packages/requirements_jupyter.txt
 RUN pip install -r pip-packages/requirements_logging.txt
 RUN pip install -r pip-packages/requirements_others.txt
-# RUN pip install -r pip-packages/requirements_additional.txt
+
+RUN pip install torch torch_geometric numpy python-logstash-async traci
+
+# RUN pip install -r pip-packages/requirements_additional.txts
 
 
 # Expose any necessary ports

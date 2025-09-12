@@ -13,19 +13,19 @@ import unittest
 from unittest.mock import MagicMock
 from uuid import UUID
 
-from trust_management.data_models.transaction.data_models.abstract_transaction import AbstractTransaction
-from trust_management.data_models.transaction.data_models.direct_recommendation import DirectRecommendation
-from trust_management.data_models.transaction.status import TransactionStatus
-from trust_management.data_models.transaction.transaction_manager import TransactionManager
-from data_models.iot_devices.common import DeviceType
+from trust.data_models.transaction.data_models.abstract_transaction import AbstractTransaction
+from trust.data_models.transaction.data_models.direct_recommendation import DirectRecommendation
+from trust.data_models.transaction.status import TransactionStatus
+from trust.data_models.transaction.transaction_manager import TransactionManager
+from core.models.devices.common import DeviceType
 
-from data_models.iot_devices.genric_iot_device import GenericDevice
-from data_models.report_management.report.report import SendingPacket
-from data_models.report_management.report.report_models import ReportType, Situation
-from trust_management.data_models.TrustVerifierRoles import TrustVerfierRoles
-from trust_management.data_models.transaction.data_models.trust_transaction import Transaction
+from core.models.devices.genric_iot_device import GenericDevice
+from core.models.uniform.components.report import SendingPacket
+from core.models.uniform.components.report_models import ReportType, Situation
+from trust.data_models.TrustVerifierRoles import TrustVerfierRoles
+from trust.data_models.transaction.data_models.trust_transaction import Transaction
 
-from trust_management.data_models.transaction.type import TransactionType
+from trust.data_models.transaction.type import TransactionType
 
 class TestTransactionManager(unittest.TestCase):
 
@@ -429,7 +429,7 @@ class TestTransactionManager(unittest.TestCase):
         
     def get_num_report_ids(self, transactions : List[Transaction]):
             
-        unique_report_ids = set(transaction.task_context.report_id for transaction in transactions)
+        unique_report_ids = set(transaction.task_context._id for transaction in transactions)
         num_report_ids = len(unique_report_ids)
         return num_report_ids
                 

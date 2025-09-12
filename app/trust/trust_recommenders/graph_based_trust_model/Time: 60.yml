@@ -1,0 +1,83 @@
+Time: 60.0 - Trustor: 11 - Trustee: 38 - Type: DIRECT_TRANSACTION - Trust Value: 0.5 - Ground Truth: 2 - Status: PENDING - Task Context: TraffiCPriorityRequest - Role: REPORTER
+Time: 60.0 - Trustor: 11 - Trustee: 38 - Type: DIRECT_TRANSACTION - Trust Value: 0 - Ground Truth: 2 - Status: VERIFIED - Task Context: TraffiCPriorityRequest - Role: REPORTER
+Time: 60.0 - Trustor: 7 - Trustee: 38 - Type: DIRECT_TRANSACTION - Trust Value: 0.5 - Ground Truth: 2 - Status: PENDING - Task Context: TraffiCPriorityRequest - Role: REPORTER
+Time: 60.0 - Trustor: 7 - Trustee: 38 - Type: DIRECT_TRANSACTION - Trust Value: 0 - Ground Truth: 2 - Status: VERIFIED - Task Context: TraffiCPriorityRequest - Role: REPORTER
+Time: 60.0 - Trustor: 15 - Trustee: 38 - Type: DIRECT_TRANSACTION - Trust Value: 0.5 - Ground Truth: 2 - Status: PENDING - Task Context: TraffiCPriorityRequest - Role: REPORTER
+Time: 60.0 - Trustor: 15 - Trustee: 38 - Type: DIRECT_TRANSACTION - Trust Value: 0 - Ground Truth: 2 - Status: VERIFIED - Task Context: TraffiCPriorityRequest - Role: REPORTER
+Time: 60.0 - Trustor: 14 - Trustee: 38 - Type: DIRECT_TRANSACTION - Trust Value: 0.5 - Ground Truth: 2 - Status: PENDING - Task Context: TraffiCPriorityRequest - Role: REPORTER
+Time: 60.0 - Trustor: 14 - Trustee: 38 - Type: DIRECT_TRANSACTION - Trust Value: 0 - Ground Truth: 2 - Status: VERIFIED - Task Context: TraffiCPriorityRequest - Role: REPORTER
+Time: 100.0 - Trustor: 17 - Trustee: 23 - Type: DIRECT_TRANSACTION - Trust Value: 0.5 - Ground Truth: 2 - Status: PENDING - Task Context: EmergencyReport - Role: REPORTER
+Time: 100.0 - Trustor: 17 - Trustee: 23 - Type: DIRECT_TRANSACTION - Trust Value: 0 - Ground Truth: 2 - Status: VERIFIED - Task Context: EmergencyReport - Role: REPORTER
+Time: 120.0 - Trustor: 14 - Trustee: 43 - Type: DIRECT_TRANSACTION - Trust Value: 0.5 - Ground Truth: 2 - Status: PENDING - Task Context: TraffiCPriorityRequest - Role: REPORTER
+
+
+Trustor: 11 - Trustee 38 n_id: tensor([], dtype=torch.int64)     edge_index: tensor([], size=(2, 0), dtype=torch.int64)          e_id: tensor([], dtype=torch.int64)
+Trustor:  11 : time batch tensor([60]) - src batch tensor([11]) - dst batch tensor([38]) - msg batch tensor([[130.8340,   1.0000,   0.0000,   0.0000,   1.0000,   0.0000,   0.0000,
+           1.0000,   0.0000,   0.0000,   0.0000,   1.0000,   0.0000,   0.0000,
+           0.5000]]) - y batch tensor([0.]) - node_features batch tensor([[0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 1.0000, 9.6625, 0.0000,
+         1.0000, 0.0000, 0.0000, 0.0000, 0.0000]])
+Trustor: 11 - Trustee 38 n_id: tensor([0, 0])    edge_index: tensor([[1, 0],
+        [0, 1]])         e_id: tensor([0, 0])
+Trustor:  11 : time batch tensor([60]) - src batch tensor([11]) - dst batch tensor([38]) - msg batch tensor([[130.8340,   0.0000,   1.0000,   0.0000,   1.0000,   0.0000,   0.0000,
+           1.0000,   0.0000,   0.0000,   0.0000,   1.0000,   0.0000,   1.0000,
+           0.0000]]) - y batch tensor([0.]) - node_features batch tensor([[0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 1.0000, 9.6625, 0.0000,
+         1.0000, 0.0000, 0.0000, 0.0000, 0.0000]])
+Trustor: 7 - Trustee 38 n_id: tensor([], dtype=torch.int64)      edge_index: tensor([], size=(2, 0), dtype=torch.int64)          e_id: tensor([], dtype=torch.int64)
+Trustor:  7 : time batch tensor([60]) - src batch tensor([7]) - dst batch tensor([38]) - msg batch tensor([[248.0881,   1.0000,   0.0000,   0.0000,   1.0000,   0.0000,   0.0000,
+           1.0000,   0.0000,   0.0000,   0.0000,   1.0000,   0.0000,   0.0000,
+           0.5000]]) - y batch tensor([0.]) - node_features batch tensor([[0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 1.0000, 9.6625, 0.0000,
+         1.0000, 0.0000, 0.0000, 0.0000, 0.0000]])
+Trustor: 7 - Trustee 38 n_id: tensor([0, 0])     edge_index: tensor([[1, 0],
+        [0, 1]])         e_id: tensor([0, 0])
+Trustor:  7 : time batch tensor([60]) - src batch tensor([7]) - dst batch tensor([38]) - msg batch tensor([[248.0881,   0.0000,   1.0000,   0.0000,   1.0000,   0.0000,   0.0000,
+           1.0000,   0.0000,   0.0000,   0.0000,   1.0000,   0.0000,   1.0000,
+           0.0000]]) - y batch tensor([0.]) - node_features batch tensor([[0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 1.0000, 9.6625, 0.0000,
+         1.0000, 0.0000, 0.0000, 0.0000, 0.0000]])
+Trustor: 15 - Trustee 38 n_id: tensor([], dtype=torch.int64)     edge_index: tensor([], size=(2, 0), dtype=torch.int64)          e_id: tensor([], dtype=torch.int64)
+Trustor:  15 : time batch tensor([60]) - src batch tensor([15]) - dst batch tensor([38]) - msg batch tensor([[337.6060,   1.0000,   0.0000,   0.0000,   1.0000,   0.0000,   0.0000,
+           1.0000,   0.0000,   0.0000,   0.0000,   1.0000,   0.0000,   0.0000,
+           0.5000]]) - y batch tensor([0.]) - node_features batch tensor([[0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 1.0000, 9.6625, 0.0000,
+         1.0000, 0.0000, 0.0000, 0.0000, 0.0000]])
+Trustor: 15 - Trustee 38 n_id: tensor([0, 0])    edge_index: tensor([[1, 0],
+        [0, 1]])         e_id: tensor([0, 0])
+Trustor:  15 : time batch tensor([60]) - src batch tensor([15]) - dst batch tensor([38]) - msg batch tensor([[337.6060,   0.0000,   1.0000,   0.0000,   1.0000,   0.0000,   0.0000,
+           1.0000,   0.0000,   0.0000,   0.0000,   1.0000,   0.0000,   1.0000,
+           0.0000]]) - y batch tensor([0.]) - node_features batch tensor([[0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 1.0000, 9.6625, 0.0000,
+         1.0000, 0.0000, 0.0000, 0.0000, 0.0000]])
+
+2024-01-16 05:12:55.729 | INFO     | events.trigger:trigger_collision:57 - 100.0        | VALID COLLISION | Collision vehicle: veh4, Edge: 49478489#0 at Position : 212.16651186880077
+2024-01-16 05:12:55.738 | INFO     | events.trigger:report_false_accident:120 - 100.0   | FAKE REPORT COLLISION | Reported vehicle: bus0, Edge: 333934000 at Position : 205.91757647894227; Reporter: dict_keys(['bus0'])
+Trustor: 17 - Trustee 23 n_id: tensor([], dtype=torch.int64)     edge_index: tensor([], size=(2, 0), dtype=torch.int64)          e_id: tensor([], dtype=torch.int64)
+Trustor:  17 : time batch tensor([100]) - src batch tensor([17]) - dst batch tensor([23]) - msg batch tensor([[323.4224,   1.0000,   0.0000,   0.0000,   1.0000,   0.0000,   0.0000,
+           1.0000,   0.0000,   0.0000,   1.0000,   0.0000,   0.0000,   0.0000,
+           0.5000]]) - y batch tensor([0.]) - node_features batch tensor([[ 0.0000,  1.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000, 10.6868,
+          0.0000,  1.0000,  0.0000,  0.0000,  0.0000,  0.0000]])
+Trustor: 17 - Trustee 23 n_id: tensor([0, 0])    edge_index: tensor([[1, 0],
+        [0, 1]])         e_id: tensor([0, 0])
+Trustor:  17 : time batch tensor([100]) - src batch tensor([17]) - dst batch tensor([23]) - msg batch tensor([[323.4224,   0.0000,   1.0000,   0.0000,   1.0000,   0.0000,   0.0000,
+           1.0000,   0.0000,   0.0000,   1.0000,   0.0000,   0.0000,   1.0000,
+           0.0000]]) - y batch tensor([0.]) - node_features batch tensor([[ 0.0000,  1.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000, 10.6868,
+          0.0000,  1.0000,  0.0000,  0.0000,  0.0000,  0.0000]])
+2024-01-16 05:12:55.909 | INFO     | scenario.handler:is_finished:114 - 100.0    | Solved Accidents: 0           | Unverified Accidents: 0       | Unauthentic Accidents: 1      | Authentic Accidents: 0        | Unverified Traffic Light Requests: 0          | Unauthentic Traffic Light Requests: 2         | Authentic Traffic Light Requests: 2
+
+
+
+
+
+Trustor: 14 - Trustee 38 
+
+
+Trustor: 14 - Trustee 38 
+
+
+Trustor: 14 - Trustee 43 
+
+n_id: tensor([], dtype=torch.int64)     edge_index: tensor([], size=(2, 0), dtype=torch.int64)          e_id: tensor([], dtype=torch.int64)
+
+
+n_id: tensor([0, 0])                    edge_index: tensor([[1, 0],                                     e_id: tensor([0, 0])
+                                                            [0, 1]])         
+
+
+n_id: tensor([1, 0])                    edge_index: tensor([[1, 1],                                     e_id: tensor([1, 0])
+                                                            [0, 0]])         

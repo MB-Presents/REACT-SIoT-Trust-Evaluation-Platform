@@ -59,7 +59,11 @@ The **REACT-SIoT** project is a research initiative designed to evaluate and val
    ```bash
    docker-compose build
    ```
-3. Start the platform:
+3. Setup the Docker image:
+   ```bash
+   docker-compose --profile setup up setup
+   ```
+4. Start the platform:
    ```bash
    docker-compose up
    ```

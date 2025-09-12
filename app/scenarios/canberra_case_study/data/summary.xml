@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-09-10 14:21:11 by Eclipse SUMO sumo Version 1.24.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="scenarios/canberra_case_study/data/osm.net.xml"/>
+        <route-files value="scenarios/canberra_case_study/data/osm_pt.rou.xml,scenarios/canberra_case_study/data/osm.passenger.trips.xml,scenarios/canberra_case_study/data/osm.truck.trips.xml,scenarios/canberra_case_study/data/osm.emergency.trips.xml,scenarios/canberra_case_study/data/osm.bus.trips.xml,scenarios/canberra_case_study/data/osm.motorcycle.trips.xml,scenarios/canberra_case_study/data/osm.bicycle.trips.xml,scenarios/canberra_case_study/data/osm.pedestrian.rou.xml"/>
+        <additional-files value="scenarios/canberra_case_study/data/osm.poly.xml,scenarios/canberra_case_study/data/osm_stops.add.xml"/>
+    </input>
+
+    <output>
+        <emission-output value="scenarios/canberra_case_study/data/emission.xml"/>
+        <summary-output value="scenarios/canberra_case_study/data/summary.xml"/>
+        <tripinfo-output value="scenarios/canberra_case_study/data/tripinfo.xml"/>
+    </output>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+    </processing>
+
+    <routing>
+        <device.rerouting.adaptation-steps value="18"/>
+        <device.rerouting.adaptation-interval value="10"/>
+    </routing>
+
+    <report>
+        <verbose value="true"/>
+        <no-warnings value="true"/>
+        <duration-log.statistics value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="40215"/>
+    </traci_server>
+
+    <gui_only>
+        <gui-settings-file value="scenarios/canberra_case_study/data/osm.view.xml"/>
+        <quit-on-end value="true"/>
+        <start value="true"/>
+        <delay value="0"/>
+    </gui_only>
+
+</sumoConfiguration>
